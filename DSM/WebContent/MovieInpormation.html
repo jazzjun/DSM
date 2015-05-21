@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<a href="#" class="좋아요">좋아요</a>
+<style type="text/css">
+.좋아요 {
+	-moz-box-shadow: inset 0px 1px 0px 0px #e6cafc;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #e6cafc;
+	box-shadow: inset 0px 1px 0px 0px #e6cafc;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c579ff
+		), color-stop(1, #a341ee));
+	background: -moz-linear-gradient(center top, #c579ff 5%, #a341ee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c579ff',
+		endColorstr='#a341ee');
+	background-color: #c579ff;
+	-webkit-border-top-left-radius: 20px;
+	-moz-border-radius-topleft: 20px;
+	border-top-left-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-moz-border-radius-topright: 20px;
+	border-top-right-radius: 20px;
+	-webkit-border-bottom-right-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	border-bottom-right-radius: 20px;
+	-webkit-border-bottom-left-radius: 20px;
+	-moz-border-radius-bottomleft: 20px;
+	border-bottom-left-radius: 20px;
+	text-indent: -13px;
+	border: 1px solid #a946f5;
+	display: inline-block;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	font-style: normal;
+	height: 30px;
+	line-height: 30px;
+	width: 100px;
+	text-decoration: none;
+	text-align: center;
+	text-shadow: 1px 1px 0px #8628ce;
+}
+
+.좋아요:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a341ee
+		), color-stop(1, #c579ff));
+	background: -moz-linear-gradient(center top, #a341ee 5%, #c579ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a341ee',
+		endColorstr='#c579ff');
+	background-color: #a341ee;
+}
+
+.좋아요:active {
+	position: relative;
+	top: 1px;
+}
+</style>
+
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	<input type="button" id="button1" onclick="button1_click();"
+		value="좋아요" />
+	<input type="button" id="button2" onclick="button2_click();"
+		value="싫어요" />
+		<br>
+	<script type="text/javascript">
+		function button1_click() {
+			alert("좋아요 버튼을 누르셨습니다.");
+		}
+		function button2_click() {
+			alert("싫어요 버튼을 누르셨습니다.");
+		}
+	</script>
+	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	<script type="text/javascript">
+		google.load("swfobject", "2.1");
+	</script>
+	<script type="text/javascript">
+		// 오류가 플레이어가 발생하면이 함수를 호출
+		function onPlayerError(errorCode) {
+			alert("An error occured of type:" + errorCode);
+		}
+
+		// 이로드되면이 기능은 자동으로 플레이어에 의해 호출된다
+		function onYouTubePlayerReady(playerId) {
+			ytplayer = document.getElementById("ytPlayer");
+			ytplayer.addEventListener("onError", "onPlayerError");
+		}
+
+		// 이 샘플의 "주요 방법". 누군가가 "실행"을 클릭 할 때 호출된다.
+		function loadPlayer() {
+			// 비디오로드
+			var videoID = "xmYifU6bjro"
+			// 다른 도메인 호출 자바 스크립트에서 플래시 수 있습니다
+			var params = {
+				allowScriptAccess : "always"
+			};
+			// 플래시 임베드의 요소 ID
+			var atts = {
+				id : "ytPlayer1"
+			};
+			// SWFObject에 의해 처리 마법의 모든 (http://code.google.com/p/swfobject/)
+			swfobject.embedSWF("http://www.youtube.com/v/" + videoID
+					+ "watch?v=xmYifU6bjro", "videoDiv", "480", "295", "8",
+					null, null, params, atts);
+		}
+		function _run() {
+			loadPlayer();
+		}
+		google.setOnLoadCallback(_run);
+	</script>
+	<div id="videoDiv">Loading...</div>
+
+</body>
+</html>
