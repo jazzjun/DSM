@@ -8,6 +8,6 @@
 </head>
 <body>
 	<jsp:include page="./include/header.jsp" flush="false" />
-	<jsp:include page="./include/footer.jsp" flush="false" />3
+	<jsp:include page="./include/footer.jsp" flush="false" />
 </body>
 </html>
