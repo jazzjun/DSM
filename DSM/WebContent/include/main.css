@@ -4,10 +4,6 @@
 	width: 1100px;
 }
 
-#top nav ul {
-	list-style: none;
-}
-
 #top nav ul li span {
 	display: inline-block;
 	width: 70px;
@@ -37,9 +33,6 @@
 	text-align: center;
 }
 
-#menu nav ul {
-	list-style: none;
-}
 #menu nav ul li span{
 	display: inline-block;
 	width: 150px;
@@ -102,6 +95,64 @@
     height: 50px; width:100%; text-align: center;
     margin-left:0px; margin-bottom:-1px;
 }
+
+ul {
+	list-style: none;
+}
+.close {
+	text-align: right;
+	font-size: large;
+}
+#dsm {
+	font-size: xx-large;
+	font-weight: bold;
+	color: purple;
+}
+#log {
+	cursor: pointer;
+}
+#loginform {
+	width: 400px;
+	height: 250px;
+	border: 1px solid gray;
+	background: white;
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	z-index: 2;
+	display: none;
+}
+.login {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background-color:#fe1a00;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:50px;
+	line-height:31px;
+	width:67px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #b23e35;
+}
+.login:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
+	background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+	background-color:#ce0100;
+}.login:active {
+	position:relative;
+	top:1px;
+}
 #infopage{
 	margin-top:20px;
 	margin-left:40px;
@@ -111,8 +162,6 @@
 	border-color: #828282;
 }
 
-
-}
 #mov_buttons {
 	position: absolute;
 }
