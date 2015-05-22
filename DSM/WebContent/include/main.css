@@ -57,36 +57,89 @@
 }
 /* 영화 정보창 */
 
-#info_photo {
+#info_page{
+	margin-top:20px;
+	margin-left:40px;
+	width: 900px;
+	height: 1500px;
+	border-style: double;
+	border-color: #828282;
+}
+
+#info_top {
 	margin-top: 10px;
 	margin-left: 10px;
+	height : 300px;
+	width : 700px;
+	float : left;
+}
+
+#info_photo {
 	width: 200px;
-	height: 380px;
+	height: 300px;
 	overflow: hidden;
-	float: left;	
+	float: left;
+}
+
+#info_top_top{
+	width:460px;
+	height:50px;
+	float: right;
+    overflow: hidden;
 }
 #info_subject {
-	margin-top: 10px;
-	margin-left: 10px;
-	width:150px;
-	height:30px;
+	width:200px;
+	height:50px;
 	float: left;
-    overflow: hidden;	
+    overflow: hidden;
+}
+#info_good{
+	width:120px;
+	height:50px;
+	float:right;
+	margin-right:15px;
 }
 
 #info_content {
-	margin-top: 10px;
-	margin-left: 10px;
-	width:400px;
-	height:50px;
-	float: left;
+ 	margin-top:10px;
+	width:460px;
+	height:240px;
+	float: right;
+    overflow: hidden;
+    padding:0;
 }
-#info_good{
+
+#info_people{
 	margin-top: 10px;
-	margin-left: 150px;
+	margin-right: 10px;
 	width:150px;
-	height:50px;
-	float: left;
+	height:1480px;
+	float: right;
+	overflow:hidden;
+}
+#info_story{
+	margin-top:10px;
+	margin-left:10px;
+	width: 700px;
+	height: 200px;
+	float: left;	
+	overflow:hidden;
+}
+#info_movie{
+	margin-top:10px;
+	margin-left:10px;
+	width: 700px;
+	height: 400px;
+	float: left;	
+	overflow:hidden;
+}
+#info_reply{
+	margin-top:10px;
+	margin-left:10px;
+	width: 700px;
+	height: 550px;
+	float: left;	
+	overflow:hidden;
 }
 #footer {
     overflow: hidden;
@@ -152,14 +205,6 @@ ul {
 }.login:active {
 	position:relative;
 	top:1px;
-}
-#infopage{
-	margin-top:20px;
-	margin-left:40px;
-	width: 900px;
-	height: 1500px;
-	border-style: double;
-	border-color: #828282;
 }
 
 #mov_buttons {
