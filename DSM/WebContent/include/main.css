@@ -55,12 +55,45 @@
 }
 
 #photo {
-	margin-top: 5px;
+	margin-top: 40px;
 	margin-left: 60px;
 	width: 200px;
 	height: 380px;
 	overflow: hidden;
 	float: left;	
+}
+/* 영화 정보창 */
+
+#info_photo {
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 200px;
+	height: 380px;
+	overflow: hidden;
+	float: left;	
+}
+#info_subject {
+	margin-top: 10px;
+	margin-left: 10px;
+	width:150px;
+	height:30px;
+	float: left;
+    overflow: hidden;	
+}
+
+#info_content {
+	margin-top: 10px;
+	margin-left: 10px;
+	width:400px;
+	height:50px;
+	float: left;
+}
+#info_good{
+	margin-top: 10px;
+	margin-left: 150px;
+	width:150px;
+	height:50px;
+	float: left;
 }
 #footer {
     overflow: hidden;
@@ -68,6 +101,14 @@
     bottom: 0; 
     height: 50px; width:100%; text-align: center;
     margin-left:0px; margin-bottom:-1px;
+}
+#infopage{
+	margin-top:20px;
+	margin-left:40px;
+	width: 900px;
+	height: 1500px;
+	border-style: double;
+	border-color: #828282;
 }
 
 
