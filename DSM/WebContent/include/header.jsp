@@ -5,7 +5,7 @@
     pageEncoding="UTF-8"%>
 <title>DSM</title>
 <script src="<%= request.getContextPath() %>/js/jquery-1.11.2.js"></script>
-<link rel="stylesheet" href="./include/main.css" type="text/css"/>
+<link rel="stylesheet" href="main.css" type="text/css"/>
 </head>
 <body>
 	<div id="top">
