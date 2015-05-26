@@ -25,7 +25,7 @@
 		rs.close();
 // 		out.print("총 게시물 : " + total + "개");
 		
-		String sqlList = "SELECT QfQues_No, Sub, Con, Date, Hit from QfQues_Bd order by QfQues_No DESC";
+		String sqlList = "SELECT QfQues_No, Sub, Date, Hit from QfQues_Bd order by QfQues_No DESC";
 		rs = stmt.executeQuery(sqlList);
 		
 %>
@@ -51,20 +51,18 @@
 	 	} else {
 	 		
 		while(rs.next()) {
-			int idx = rs.getInt(1);
-			String name = rs.getString(2);
-			String title = rs.getString(3);
-			String time = rs.getString(4);
-			int hit = rs.getInt(5);
+			int QfQues_No = rs.getInt(1);
+			String Sub = rs.getString(2);
+			String Date = rs.getString(3);
+			int Hit = rs.getInt(4);
 		
 %>
 <tr height="25" align="center">
 	<td>&nbsp;</td>
-	<td><%=idx %></td>
-	<td align="left"><%=title %></td>
-	<td align="center"><%=name %></td>
-	<td align="center"><%=time %></td>
-	<td align="center"><%=hit %></td>
+	<td><%=QfQues_No %></td>
+	<td align="center"><a href="customer_center_view.jsp"><%=Sub %></td>
+	<td align="center"><%=Date %></td>
+	<td align="center"><%=Hit %></td>
 	<td>&nbsp;</td>
 </tr>
   <tr height="1" bgcolor="#D2D2D2"><td colspan="6"></td></tr>
