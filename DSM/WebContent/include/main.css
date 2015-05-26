@@ -88,7 +88,7 @@
     overflow: hidden;
 }
 #info_subject {
-	width:200px;
+	width:320px;
 	height:50px;
 	float: left;
     overflow: hidden;
@@ -115,7 +115,101 @@
 	width:150px;
 	height:1480px;
 	float: right;
-	overflow:hidden;
+}
+#info_people_type{
+	width:150px;
+	height:35px;
+	float:right;
+}
+#info_people_in1{
+	width:150px;
+	height:200px;
+	float: right;
+}
+#info_people_in1_photo{
+	width:111px;
+	height:139px;
+	margin: 0 auto;
+}
+#info_people_in1_intro{
+	margin-top:5px;
+	width:150px;
+	height:61px;
+	float: right;
+	text-align:center;
+	font-size:12px;
+}
+#info_people_in2{
+	width:150px;
+	height:200px;
+	float: right;
+}
+#info_people_in2_photo{
+	width:111px;
+	height:139px;
+	margin: 0 auto;
+}
+#info_people_in2_intro{
+	margin-top:5px;
+	width:150px;
+	height:61px;
+	float: right;
+	text-align:center;
+	font-size:12px;
+}
+#info_people_in3{
+	width:150px;
+	height:200px;
+	float: right;
+}
+#info_people_in3_photo{
+	width:111px;
+	height:139px;
+	margin: 0 auto;
+}
+#info_people_in3_intro{
+	margin-top:5px;
+	width:150px;
+	height:61px;
+	float: right;
+	text-align:center;
+	font-size:12px;
+}
+#info_people_in4{
+	width:150px;
+	height:200px;
+	float: right;
+}
+#info_people_in4_photo{
+	width:111px;
+	height:139px;
+	margin: 0 auto;
+}
+#info_people_in4_intro{
+	margin-top:5px;
+	width:150px;
+	height:61px;
+	float: right;
+	text-align:center;
+	font-size:12px;
+}
+#info_people_in5{
+	width:150px;
+	height:200px;
+	float: right;
+}
+#info_people_in5_photo{
+	width:111px;
+	height:139px;
+	margin: 0 auto;
+}
+#info_people_in5_intro{
+	margin-top:5px;
+	width:150px;
+	height:61px;
+	float: right;
+	text-align:center;
+	font-size:12px;
 }
 #info_story{
 	margin-top:10px;
@@ -142,11 +236,35 @@
 	overflow:hidden;
 }
 #footer {
-    overflow: hidden;
-    position: absolute;
-    bottom: 0; 
-    height: 50px; width:100%; text-align: center;
-    margin-left:0px; margin-bottom:-1px;
+// 페이지의 높이를 브라우저 높이로 선언
+html,body { height: 100%; margin: 0; padding: 0; }
+ 
+#container {
+min-height: 100%; 
+// relative 선언을 통해 하단바의 absolute position 이 정확한 위치에 오도록 한다.
+position: relative;
+// content 시작 위치부터 그라디언트 효과가 나타나도록 한다.
+background: #0202F7 url('images/gr.jpg') 0 70px repeat-x;
+}
+ 
+#container #header {
+height: 70px;
+background-color: white;
+}
+ 
+#container #content {
+// 하단바가 표시되는 공간 부여
+padding-bottom: 50px;
+}
+ 
+#container #footer {
+// 하단바를 하단에 고정
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 50px;
+background-color: silver;
+}
 }
 
 ul {
