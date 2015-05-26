@@ -8,42 +8,23 @@
 <link rel="stylesheet" href="main.css" type="text/css"/>
 </head>
 <body>
+	<div id="div1">
 	<div id="top">
 		<nav>
 			<ul>
 				<li>
-					<span id="log" onclick="$('#loginform').show();">로그인</span>
-					<span>회원가입</span>
+					<span id="log" onclick="$('#loginform_outer').show();">로그인</span>
+					<span id="log"><a href="/DSM/include/membership1.jsp" style="text-decoration: none; color: black;">회원가입</a></span>
 					<span>MYPAGE</span>
 					<span>고객센터</span>
 				</li>
 			</ul>	
 		</nav>	
 	</div>
-	<div id="header">
-		<header>
-			<hgroup>
-				<h1><a href="/DSM/" style="text-decoration:none; color:#ffffff;">What's your favorite DSM?</a></h1>
-				<h2>Developers Movies</h2>
-			</hgroup>
-		</header>
-	</div>
-	<hr>
-	<div id="menu">	
-		<nav>
-			<ul>
-				<li>
-					<span>박스오피스</span>
-					<span><a href="/DSM/include/LatestMovie.jsp" style="text-decoration:none; color:#c0c0c0">최신개봉작</a></span>
-					<span><a href="/DSM/include/ScheduleMovie.jsp" style="text-decoration:none; color:#c0c0c0">상영예정작</a></span>
-					<span>예약</span>
-				</li>
-			</ul>
-		</nav>
-	</div>
+	<div id="loginform_outer">
 	<div id="loginform">
 		<div align="right">
-			<input type="button" value="×" class="close"/>
+			<input type="button" value="×" class="close" onclick="$('#loginform_outer').hide();"/>
 			<br>
 		</div>	
 		<div align="center">	
@@ -70,4 +51,27 @@
 				<td colspan="3" align="center" style="font-size: small;">아이디 찾기>&nbsp;&nbsp;&nbsp;비밀번호 찾기></td>
 			</tr>
 		</table>
+	</div>
+	</div>
+	<div id="header">
+		<header>
+			<hgroup>
+				<h1><a href="/DSM/" style="text-decoration:none; color:#ffffff;">What's your favorite DSM?</a></h1>
+				<h2>Developers Movies</h2>
+			</hgroup>
+		</header>
+	</div>
+	<hr>
+	<div id="menu">	
+		<nav>
+			<ul>
+				<li>
+					<span>박스오피스</span>
+					<span><a href="/DSM/include/LatestMovie.jsp" style="text-decoration:none; color:#c0c0c0">최신개봉작</a></span>
+					<span><a href="/DSM/include/ScheduleMovie.jsp" style="text-decoration:none; color:#c0c0c0">상영예정작</a></span>
+					<span>예약</span>
+				</li>
+			</ul>
+		</nav>
+	</div>
 	</div>

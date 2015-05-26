@@ -1,16 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>DSM 약관동의</title>
-</head>
-<body>
-	<span style="font-weight: bold; padding-left: 30px;">DSM 약관동의</span>
-	<br><br>
-	<div style=" text-align: center; width: 750px;" >
-	<textarea rows="20" cols="100" readonly="readonly">가. 수집하는 개인정보의 항목첫째, 회사는 회원가 입, 원활한 고객상담, 각종 서비스의 제공을 위해 최초 회원가입 당시 아래와 같은 최소한의 개인정보를 필수항목으로 수집하고 있습니다.
+	pageEncoding="UTF-8"%>
+<script>
+	function chk() {
+		var req = document.getElementsByName('req');
+		if (req[0].checked) {
+			location.href = "membership2.jsp";
+		} else {
+			alert("약관동의 하셔야 가입 하실 수 있습니다.");
+		}
+	}
+	function nochk() {
+		var chk = confirm("가입을 취소하시겠습니까?");
+		if (chk) {
+			location.href = "../index.jsp"
+		} else {
+			return false;
+		}
+	}
+</script>
+<jsp:include page="header.jsp" flush="false" />
+<br>
+<div style="width: 1100px; margin: 0 auto;">
+	<div>
+		<table>
+			<tr height="60" align="center" style="font-size: large; font-weight:bold; color: white;">
+				<td width="150" bgcolor="#006400" style="color: black;">약관동의</td>
+				<td width="150" bgcolor="#006400">개인정보입력</td>
+				<td width="150" bgcolor="#006400">가입완료</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<span style="font-weight: bold; padding-left: 30px;">DSM 약관동의</span> <br>
+	<br>
+	<div style="text-align: center; width: 750px;">
+		<textarea rows="20" cols="100" readonly="readonly">가. 수집하는 개인정보의 항목첫째, 회사는 회원가 입, 원활한 고객상담, 각종 서비스의 제공을 위해 최초 회원가입 당시 아래와 같은 최소한의 개인정보를 필수항목으로 수집하고 있습니다.
 회원가입
 - 이름, 생년월일, 성별, 아이디, 비밀번호, 별명, 연락처(메일주소, 휴대폰 번호 중 선택), 가입인증정보
 만14세 미만 아동 회원가입 
@@ -33,10 +57,9 @@
 - 협력회사로부터의 제공 
 - 생성정보 수집 툴을 통한 수집
 	</textarea>
-	<br>
-	<input type="checkbox" name="req" align="middle" /> 개인정보 수집 및 이용에 동의합니다. <br>
-	<input type="button" value="동의" align="middle" />&nbsp;&nbsp;&nbsp;
-	<input type="button" value="동의하지 않습니다" align="middle" />
+		<br> <input type="checkbox" name="req" /> 개인정보 수집 및 이용에 동의합니다. <br>
+		<input type="button" value="동의" onclick="chk();" />&nbsp;&nbsp;&nbsp;
+		<input type="button" value="동의하지 않습니다" onclick="nochk();" />
 	</div>
-</body>
-</html>
+</div>
+<jsp:include page="footer.jsp" flush="false" />
